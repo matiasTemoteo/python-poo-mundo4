@@ -1,0 +1,85 @@
+Classe
+
+ - Uma forma com as instruções básicas e mínimas para a construção
+   de um objeto.
+
+ Diagrama de Classes
+
+   ----------------------
+   |     NomeClasse     |  - Nome da Classe (Biscoito)
+   ----------------------
+   |   Características  |  - Atributos (tamanho, massa, peso,
+   |     que tenho      |    cobertura, cozido, temperatura)
+   ----------------------
+   |   Coisas que       |  - métodos (cozinhar(), congelar(), cobrir(),
+   |   posso fazer      |    confeitar(), podeComer(), comer())
+   ----------------------
+
+Instância
+
+ - A ação de construir um objeto a partir de uma forma (Classe). Onde todos os objetos
+   são instâncias de uma classe e herdam todas as suas características.
+
+Objeto
+
+ "Coisa material ou abstrata que é feita a partir de um modelo e pode ser descrita por meio
+  das suas características, comportamentos e estado atual".
+
+ - Objeto é gerado a partir de uma classe e pode ser descrito pelos atributos e métodos 
+    e estado atual.
+
+ Estado
+
+   - É o conjunto de valores de todos os atributos de um objeto ao longo do tempo.
+
+
+Exemplos de Objetos Abstratos
+
+ - Uma consulta no médico
+ - Um processo de venda
+ - Um compromisso ou reunião
+ - Uma aula na faculdade
+ - Uma transação bancária
+ - Uma reserve de voo
+ - Um erro do sistema
+
+Exemplo de objetos Concretos
+
+ - Um produto
+ - Um Veículo
+ - Uma pessoa
+ - Uma casa
+
+
+Exemplo de Estrutura de objetos
+
+ - Objeto Abstrato
+
+   ----------------------
+   |       Serviço      |     Exemplo de Estado
+   ----------------------
+   |   + Nome           |        Limpeza de Sofá
+   |   + Tipo           |        Limpeza
+   |   + Preço          |        R$ 150,00
+   |   + Finalizado     |        True
+   ----------------------
+   |  + Ajustar Preço() |  
+   |  + Finalizar()     |    
+   ----------------------
+
+
+ - Objeto Concreto
+
+   ----------------------
+   |       Casa         |     Exemplo de Estado
+   ----------------------
+   |   + Área           |        200m2
+   |   + Preço          |        R$ 350.000,00
+   |   + Categoria      |        Residência
+   |   + Usada          |        False
+   |   + Vendida        |        True
+   ----------------------
+   |  + Ajustar Preço() |  
+   |  + DefinirUsada()  |
+   |  + Vender()        |    
+   ----------------------

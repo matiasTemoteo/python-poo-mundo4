@@ -1,0 +1,53 @@
+Evolução das variáveis
+
+Variável Simples
+
+ Tendo a variável "Estado", podemos adicionar o valor "RJ" na
+ variável "estado". Porém ao adicionar outro valor, como por exemplo
+ "SP", o valor anterior será substituído pelo novo valor.
+
+Variáveis compostas
+
+ Tendo uma variável "Estados" sendo composta, podemos adicionar
+ multíplos valores a ela, como "SP" e "RJ", onde os valores estarão
+ na variável ao mesmo tempo. Para acessar cada valor da variável
+ composta, é necessário indicar um índice numérico.
+
+Dicionários
+
+ Da mesma forma que as variáveis compostas, podemo adicionar multiplos
+ valores a um dicionário, porém no caso dos dicionários, os índices
+ são nominais, podendo receber nomes e textos como índice e não apenas
+ números.
+
+Funções
+
+ Com a utilização de funcionalidades, as "funções", podemos utilizar
+ os dados das variáveis e manipula-los, porém nesse contexto, as
+ funções e as variáveis estão em locais distintos e as vezes isolados.
+
+Objetos
+
+ Os Objetos por sua vez, podem guardar os dados como as variáveis, mas
+ ao mesmo tempo, manter internamente os próprios métodos que irão
+ interagir com essas variáveis.
+
+
+ Declaração da classe
+
+  - Usamos o termo "class" para declarar a classe.
+
+  class MinhaClasse:
+    * Atributos
+    * Métodos
+
+ Declaração dos objetos
+
+  - O objeto é criado a partir de uma instância da classe.
+  - Na instância, a classe é chamada e colocamos parentesis
+    na frente como ocorre nos métodos, mas nesse caso isso
+    significa que o método construtor da classe esta sendo
+    chamado, método esse que é essencial para a classe ser
+    instânciada.
+
+   obj = MinhaClasse()

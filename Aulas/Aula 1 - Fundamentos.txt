@@ -1,0 +1,41 @@
+De onde veio a Programação Orientada a Objetos?
+
+Já ouviu falar da "Crise do software em 1960"?
+
+
+- Representar elementos do mundo real nos sistemas computacionais
+
+- E esses elementos se chamam Objetos?
+
+- "A necessidade é a mãe da invenção", Platão.
+
+- "É preciso ter o caos dentro de si para dar á luz uma estrela dançante", Nietzsche.
+
+
+Timeline
+
+ - 1950 - Linguagens de baixo nível (Assembly)
+
+ - 1955 - Linguagens Lineares (Fortran, Cobol, C, Basic)
+   - Usando tecnicas como GOTO para forçar mudanças na rotina de execução
+
+ - 1960 - Linguagens Estruturadas (Algol - ALGOrithmic Language)
+   - Matemático e Físico Edsger Wybe Dijkstra.
+   - Usando estruturas condicionais e de repetição
+
+ - 1965 - Linguagens Modulares
+   - Usando multiplos modulos como arquivos para separação e organização do código
+
+ - 1970 - Linguagens Orientadas a Objetos
+   - Pesquisador científico Kristen Nygaard - Usava o ALGOL para simulações
+     - Ele criou o termo objeto junto a uma super liguagem chamada "Simula" baseada na ALGOL.
+
+   - Alan Curtis Kay - Matemático e Inventor, criador do Dynabook.
+     - Ele trabalhou na Xerox enquanto criava o Dynabook, um dispositivo educacional para crianças.
+
+     - Juntamente ao Dyanbook, Alan Kay criou a linguagem Smalltalk.
+
+
+OOP - Object Oriented Programming
+OOAD - Object Oriented Analysis and Design
+UML - Unified Modeling Language

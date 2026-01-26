@@ -1,0 +1,31 @@
+Quais são as vantagens em se aprender POO?
+
+O carro é um sistema, onde é composto por diversos componentes.
+
+COMERNada
+  - Confiável
+  - Oportuno
+  - Manutenível
+  - Extensível
+  - Reutilizável
+  - Natural
+
+
+Confiável
+ - O isolamento das partes gera algo mais seguro. Ao alterar uma das partes, nenhuma outra é afetada.
+
+Oportuno
+ - Ao dividr tudo em partes, cada uma delas pode ser desenvolvida em paralelo.
+
+Manutenível
+ - Atualizar é mais fácil. Uma pequena alteração vai beneficiar todas as partes relacionadas.
+
+Extensível
+ - Um sistema não deve ser estático. Tudo deve mudar e crescer para permanecer útil.
+
+Reutilizável
+ - Objetos que foram criados para um sistema podem ser aproveitados em outros sistemas.
+
+Natural
+ - Mais fácil de entender. Maior atenção às funcionalidades do que aos detalhes de implementação.
+ 

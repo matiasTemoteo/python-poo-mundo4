@@ -1,0 +1,72 @@
+Python POO
+
+Conceitos abordados
+
+  - POO
+  - OOP
+  - OOAD
+
+Embasamento
+
+ - De onde veio?
+ - Para que serve?
+ - As vantagens de uso.
+ - Entendendo o paradigma.
+
+Fundamentação
+
+ - O que é classe?
+ - O que é objeto?
+ - Atributos.
+ - Métodos.
+ - Estado.
+ - Instância
+ - Visibilidade
+ - Os 4 pilares
+
+Pilares
+
+ - Abstração
+ - Encapsulamento
+ - Herança
+ - Polimorfismo
+
+Conceitos
+
+ - Getters
+ - Setters
+ - Self e super
+ - Dunder Methods
+ - Associação
+ - Agregação
+ - Composição
+
+Banco de dados
+
+ - Acesso a bases locais
+ - SQLite3
+ - Object-Relational Mapper
+
+
+Esse curso é pra mim?
+
+ - Ele é sim para quem...
+
+   Quer aprender os fundamentos da POO
+
+   Já sabe a base da programação
+
+   Já conhece os fundamentos de Python
+
+   Tem disposição para treinar
+
+
+Bibliografia Recomendada
+
+ - Documentação oficial
+
+ - Livros
+
+   - Introdução a programação com Python, Nilo Ney Coutinho
+   - Object-Oriented Python
+   - Python 3 - The Comprehensive Guide
