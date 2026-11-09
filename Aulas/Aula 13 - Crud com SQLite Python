@@ -1,0 +1,53 @@
+Até o momento...
+  já vimos como criar e acessar bancos de dados em SQLite.
+  Já vimos como acessar e resgatar dados usando Python
+
+Agora, vamos ir mais a fundo e entender o conceito de uma aplicação que
+utiliza bancos de dados.
+
+
+CRUD
+
+ - Acrônimo de:
+
+    CREATE
+    READ
+    UPDATE
+    DELETE
+
+
+ - É muito comum ouvirmos falar de sistema que implemetam um CRUD. Nesse caso,
+   estamos simplesmente ouvindo sobre um sistema que acessa Bancos de Dados e
+   implementa as operações básicas descritas acima, Criar, Ler, Atualizar e
+   Deletar registros e tabelas dentro do banco de dados.
+
+
+Projeto de CRUD
+
+ - Projeto de cadastro de pessoas usando SQLite em Python, aplicando os conceitos
+   do CRUD apresentados acima. Ou seja, será um projeto que lidará com uma Tabela
+   de Pessoas e deve realizar as operações de criação, leitura, alteração e deleção
+   de registros.
+
+ - Estrutura do Banco de Dados:
+
+     (DB) cadastro.db
+        - (tabela) pessoas
+            - (coluna) cod    [INTEGER]
+            - (coluna) nome   [TEXT]
+            - (coluna) altura [FLOAT]
+
+
+ - Sistema de Cadastro:
+
+   - Ações esperadas:
+
+      1 - Cadastrar pessoa
+      2 - Listar pessoa
+      3 - Atualizar pessoa
+      4 - Excluir pessoa
+      5 - Busca por nome
+      0 - Sair
+
+      (Podemos criar um menu principal com as ações descritas acima)
+
