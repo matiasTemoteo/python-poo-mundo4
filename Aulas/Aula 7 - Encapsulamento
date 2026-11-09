@@ -1,0 +1,67 @@
+Encapsulamento
+
+Visa manter a integridade do sistema, protegendo o estado interno
+do objeto contra interferência externa não regulamentada.
+
+
+Exemplo com capsula de remédio:
+
+ Isola a dose exata dos compostos
+
+ Impede a ação de fatores externos (umidade, luz, ...)
+
+ Protege o paciente do gosto amargo e da toxicidade direta
+
+
+Principais Vantagens:
+
+ Segurança e controle
+
+ Facilidade de manutenção
+
+ Flexibilidade e reutilização
+
+ Redução de efeitos colaterais
+
+
+Exemplo na área de TI:
+
+ Isola um sistema bancário de acesso direto, como alterar saldo
+ sem autentiação ou sem passar pelas validações de limite da
+ conta.
+
+
+Para realizar a proteção, precisamos entender:
+
+ Visibilidade dos atributos
+
+ Acesso aos dados protegidos
+
+
+Visibilidade
+
+  Existem três tipos de visibilidade para atributos em linguagem POO:
+
+    Public (+)       - Acessível para todo o escopo
+    Protected (#)    - Acessível apenas para a classe atual e subclasses
+    Private (-)      - Acessível apenas para a própria classe
+
+  Exemplo:
+
+    CLASS A           CLASS B (CLASS A)           CLASS C (CLASS A)
+     + atrib1          + atrib1          + atrib1
+     # atrib2          # atrib2          # atrib2
+     - atrib3
+
+
+  No python, as visibilidades estão dentro da seguinte convenção:
+
+    "Consenting Adults" - Liberdade com responsabilidade
+
+  Como essa visibilidade é definida no Python:
+
+    O Python utiliza underscore para a convenção de visibilidade:
+
+      Public (+)       - atrib
+      Protected (#)    - _atrib
+      Private (-)      - __atrib
