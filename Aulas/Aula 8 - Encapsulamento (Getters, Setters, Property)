@@ -1,0 +1,40 @@
+Acesso aos Dados
+
+ Existem duas maneiras de permitir o acesso aos dados encapsulados:
+
+   - Uso de getters e setters
+
+      Métodos acessores para auxiliar e proteger o acesso aos atributos
+      protegidos.
+
+       Exemplo:
+
+          Avaliação
+            + nome
+            + disciplina
+            # _nota
+
+            + set_nota(valor)
+            + get_nota()
+
+   - Uso de decorador property
+
+      Utiliza o decorador "@property" para designar que um
+      atributo protegido possui um acesso de getter e setter
+      ao ser invocado sem precisar referenciar o atributo em si.
+
+      Exemplo:
+
+        Avaliacao
+          + nome
+          + disciplina
+          # _nota
+
+          + @nota.getter
+          + @nota.setter
+
+        Acessado com:
+
+          a = Avaliacao()
+          a.nota = 8.5 # nesse caso é o property que esta sendo
+                         referenciado e não o atributo em si.
