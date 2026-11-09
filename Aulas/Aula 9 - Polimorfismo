@@ -1,0 +1,72 @@
+O que significa polimorfismo?
+
+É verdade que é um coneito difícil?
+
+Quais os tipos de polimorfismo?
+
+O que é override e overload?
+
+O que pato tem a ver com tudo isso?
+
+
+Polimorfismo
+
+-> Polýs: Vários
+-> Morphé: Forma
+
+Propriedade ou estado daquilo que se apresenta e/ou se comporta
+de várias formas diferentes.
+
+-> "Um único nome, mas comportamentos diferentes"
+
+
+Usando o pato como exemplo:
+
+ -> Pato.locomover() - Um método que depende do ambiente onde o pato
+ esta, ou seja, em cada ambiente, o método "locomover" terá um
+ comportamento diferente.
+
+   Pato.locomover("terra")
+   Pato.locomover("ar")
+   Pato.locomover("água")
+
+
+Comportamento no Python
+
+ -> Function Overload
+
+   Usando o método "len()" como exemplo:
+
+   len("gustavo") -> Retorna o número de letras da string
+   len(["sandy", "junior"]) -> Retorna o número de elementos da lista
+   len({"a": "x", "b": "y"}) -> Retorna o número de conjuntos "chave-valor"
+
+   Ou seja, o mesmo método "len()" terá comportamentos diferentes, dependendo do tipo
+   de parametro passado em sua chamada.
+
+ -> Operator Overload
+
+   Usando o operador "+" como exemplo:
+
+   (+ 5) -> Define o valor "5" como um número positivo
+   (5 + 4) -> Realiza a soma dos valores "5" e "4"
+   ("Poli" + "Morfo") -> Concatena duas strings diferentes
+   ([3, 5] + [2, 4]) -> Unifica as listas em uma única lista
+
+
+ -> Override / Subtyping
+
+   Quando um método existente na classe Pai é sobreposto por um
+   método diferente mas com o mesmo nome na classe filha. Dessa
+   forma, o método chamado a partir da classe filha será sempre
+   o método sobreposto e não o método da classe Pai.
+
+   Usando a Classe "Cachorro" como exemplo:
+
+   class Cachorro:
+     def latir(self):
+        return "AU AU AU"
+
+   class PitBull:
+     def latir(self):
+        return "RUF RUF RUF"
