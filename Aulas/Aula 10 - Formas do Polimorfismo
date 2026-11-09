@@ -1,0 +1,111 @@
+Overloading
+
+ -> Sobrecarga de Método
+
+   Métodos com o mesmo nome, porém com parametros (assinatura) e execução
+   interna diferentes.
+
+   Exemplo:
+
+     Analisador
+       analisar(int)
+       analisar(float)
+       analisar(str)
+
+
+   Por padrão, o Python não possibilita a declaração de métodos em
+   sobrecarga automaticamente.
+   Para fazer o uso desse tipo de definição, será necessário utilizar
+   bibliotecas como a "singledispatchmethod" já disponível nativamente
+   nos recursos do python.
+
+   Exemplo:
+
+     from functools import singledispatchmethod
+
+     @singledispatchmethod
+     def analisar(self, valor):
+        pass
+        #Execução ...
+
+     @analisar.register
+     def _(self, valor: int):
+        pass
+        #Execução ...
+
+     @analisar.register
+     def _(self, valor: float):
+        pass
+        #Execução ...
+
+     @analisar.register
+     def _(self, valor: str):
+        pass
+        #Execução ...
+
+
+ -> Sobrecarga de Operador
+
+   Para sobrecarga de operadores, o Python possui vários métodos
+   que substituem as operações mais comuns para serem definidos dentro
+   de classes quando necessário.
+
+   Métodos mágicos para operadores
+
+   - Equal to                   p1 == p2     p1.__eq__(p2)
+   - Not Equal to               p1 != p2     p1.__ne__(p2)
+   - Less than                  p1 <  p2     p1.__lt__(p2)
+   - Less than or equal to      p1 <= p2     p1.__le__(p2)
+   - Greater then               p1 >  p2     p1.__gt__(p2)
+   - Greater than or equal to   p1 >= p2     p1.__ge__(p2)
+   - In-place Addition          p1 += p2     p1.__iadd__(p2)
+   - In-place Subtract          p1 -= p2     p1.__isub__(p2)
+
+
+ -> Duck Typing
+
+   "Se parece um pato, nada com um pato, voa como um pato
+   e faz 'quack', então provavelmente é um pato"
+
+   Se partirmos do pressuposto que algo possa ser aberto, como
+   por exemplo, uma porta, uma empresa, um ovo, etc, no python
+   podemos programar para abri-los independente se eles tem ou
+   não relação.
+
+   Ou seja, podemos criar rotinas para executar um
+   método que sempre tem o mesmo nome, independente do que ele
+   realize ou signifique, cabendo apenas a classe respectiva
+   lidar com os resultados.
+
+   Exemplos:
+
+
+    class Porta:
+      def abrir(self):
+          print(f"Girar a maçaneta e empurrar/puxar a porta")
+
+
+    class Empresa:
+        def abrir(self):
+            print(f"Vá ao portal do empreendedor com toda a documentação")
+
+
+    class Ovo:
+        def abrir(self):
+            print(f"Quebre a casca com um garfo e separe as partes")
+
+
+    def tentar_abrir(objeto):
+        try:
+            objeto.abrir()
+        except:
+            print(f"Encontrei problemas ao tentar abrir o objeto {objeto.__class__.__name__}")
+
+
+    Nesses exemplos acima, foi criado o método "tentar_abrir" para
+    executar o método "abrir" de dentro de qualquer objeto que
+    seja passado por parametro.
+
+    Assim, caso o método exista, será executado onde a rotina interna
+    cabe apenas ao objeto em questão lidar e caso não exista, sempre
+    terá uma rotina de exceção para lidar com o erro.
