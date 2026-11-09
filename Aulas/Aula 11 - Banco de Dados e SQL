@@ -1,0 +1,35 @@
+O que é banco de dados?
+
+ - Uma ferramenta para armazernar e gerenciar dados, controlando o
+   acesso, organização e também as relações entre os dados e estruturas armazenadas.
+
+ - No caso dos "banco de dados relacionais", os dados são estruturados dentro de
+   "tabelas" que obriga os dados a respeitarem a estrutura dessas tabelas e
+   que permite também estabelecer relações entre diferentes tabelas.
+
+O que é SQL?
+
+ - "Structured Query Language", uma linguagem utilizada dentro de banco de dados
+   relacionais, utilizada para criar, modificar e remover tabelas e dados que podem
+   ser inseridos nas tabelas. Podemos realizar operações como as seguintes:
+
+   - Criar (Tabelas, views, etc)
+   - Modificar (Tabelas, views, etc)
+   - Remover (Tabelas, views, etc)
+
+   - Inserir (Dados em tabelas)
+   - Deletar (Dados de tabelas)
+   - Selecionar (Dados de tabelas ou views)
+
+Por que usar SQLite?
+
+ - Um banco de dados simples, leve e que pode rodar em diversos sistemas. Possui suporte
+   à linguagem SQL e pode ser salvo como um simples arquivo, sendo muito útil para
+   estudo e projetos pequenos ou locais.
+
+Como criar um banco de dados?
+
+ - Podemos fazer o download de um gerenciador de banco de dados como o "db browser for SQLite".
+
+ - Dentro de um gerenciador de banco de dados, podemos criar um banco propriamente dito e
+   interagir com sua estrutura e fazer buscas e alterações nos dados salvos nesse banco de dados.
