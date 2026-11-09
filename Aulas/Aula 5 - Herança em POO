@@ -1,0 +1,69 @@
+4 Pilares da POO
+
+Abstração
+Encapsulamento
+Herança
+Polimorfismo
+
+
+Herança
+
+É um relacionamento entre itens gerais (ancestrais) e tipos mais
+especificos (descendentes) desses itens, que herdam atributos e métodos
+dos níveis superiores.
+
+Na herança, a classe filho "é UM" tal qual a classe pai.
+
+
+Principais vantagens
+
+Reutilização de código
+Organização hierárquica
+Facilita a manutenção
+Extensibilidade
+Suporte a polimorfismo
+
+
+Representação diagramática
+
+Uso da seta para indicar a direção da herança (Classe Pai <- Clase filho)
+
+Classe Pai - Superclasse / Classe base
+Classe Filho - Subclasse / Classe Derivada
+
+
+
+Exemplos:
+
+
+Aluno                        Professor                   Funcionario
+  + nome                       + nome                      + nome
+  + idade                      + idade                     + idade
+  + curso                      + especialidade             + cargo
+  + turma                      + nivel                     + setor
+  + fazer_aniversario()        + fazer_aniversario()       + fazer_aniversario()
+  + fazer_matricula()          + dar_aula()                + bater_ponto()
+
+
+Em todas as classes acima, os atributos "nome e idade" e o método "fazer_aniversario()"
+aparecem. São caracteristicas em comum entre as classes.
+
+
+Podemo então criar outra classe "ascestral" a essas classes que possa conter essas
+características em comum:
+
+(Generalizada)
+Pessoa
+  + nome
+  + idade
+  + fazer_aniversario()
+
+
+Assim, as classes anteriores ao herdarem as caracteristicas da classe pessoa, ficariam
+da sequinte forma:
+
+(Especializada)
+Aluno                        Professor                   Funcionario
+  + curso                      + especialidade             + cargo
+  + turma                      + nivel                     + setor
+  + fazer_matricula()          + dar_aula()                + bater_ponto()
