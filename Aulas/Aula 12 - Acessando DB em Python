@@ -1,0 +1,78 @@
+O acesso a um Banco de Dados SQLite em Python, pode ser feito utilizando a bilbioteca
+"sqlite3".
+
+
+O acesso ao SQLite também requer uma conexão e um cursor, estruturas criadas utilizando
+também a biblioteca "sqlite3". O cursor funcionará como uma lista de índices, trazendo
+em ordem de resposta do sqlite os dados, uma linha em cada índice do cursor.
+
+  import sqlite3
+  conexao = sqlite3.connect('meubanco.db')
+  cursor = conexao.cursor()
+
+
+Após a conexão e cursor criados, podemos executar comandos SQL com o método "execute":
+
+  cursor.execute('''SELECT * FROM amigo;''')
+
+
+Para acessar os dados resultantes, podemos usar os métodos abaixo:
+
+  - fetchall(): Traz todos os dados de uma vez
+  - fetchone(): Traz apenas o primeiro item do cursor
+
+  Para reduzir a craga na memoria causada pela busca de dados, é recomendado utilizar
+  o fetchone, principalmente para grande volume de dados e pouca memória disponível.
+
+  Os dados serão apresentados em tuplas, da seguinte forma:
+
+    - Considerando, uma tebela de amigos, com id, nome e nascimento, teriamos os seguintes
+      dados:
+
+        (1, "Alan", "2000-05-05"),
+        (2, "Zack", "2001-08-20")
+
+  Para acessar os dados, podemos indicar o índice do cursor que desejamos, como funcionária em
+  uma lista:
+
+    cursor[0] -> (1, "Alan", "2000-05-05")
+
+  Para acessar os elementos de cada linha, como são tuplas, podemos acessar com índices da
+  mesma maneira:
+
+    linha_1[0] -> 1
+    linha_1[1] -> "Alan"
+
+  Podemos dizer ao python para utilizar uma notação de dicionário também, adicionando
+  a seguinte linha no código logo abaixo da criação da conexão:
+
+    conexao.row_factory = sqlite3.Row
+
+    Acessando:
+
+    linha_1['nome'] -> "Alan"
+
+
+Ao utilizar a conexão com banco de dados, uma boa prática é utilizar a estrutura "with",
+englobando o código do acesso ao banco. Ao terminar a execução do conteúdo do bloco
+"with", o próprio python liberará a memória e fechara de maneira segura a conexão
+estabelecida:
+
+  with sqlite3.connect('meubanco.db') as conexao:
+    cursor = conexao.cursor()
+    cursor.execute('''SELECT * FROM amigo;''')
+    cursor.fetchall()
+    ...
+
+
+Outra boa prática, é a utilização da estrutura try-except para capturar erros e evitar
+a quebra da execução do código:
+
+  try:
+    with sqlite3.connect('meubanco.db') as conexao:
+      cursor = conexao.cursor()
+      cursor.execute('''SELECT * FROM amigo;''')
+      cursor.fetchall()
+      ...
+  except Exception as error:
+    ...
