@@ -1,0 +1,88 @@
+Abstração
+
+É a prática de ignorar o irrelevante e se focar estritamente no essencial.
+
+Como exemplo, ao usar um controle remoto, você precisar saber como os circuitos
+internos funcionam para poder usar o controle? A resposta é não, pois isso é algo
+que pode ser abstraído ao usar, focando apenas em usar os botões disponíveis.
+
+
+Principais vantagens:
+
+Maior legibilidade
+Padronização
+Simplificação
+Segurança
+
+
+Exemplos de tipos de abstração:
+
+Existe abstração de dados, que acontece quando ignoramos informações
+desnecessárias para o escopo do projeto.
+
+Existe a abstração de processos, quando não precisamos saber como um método faz
+seu trabalho, apenas saber que ele existe pela interface.
+
+
+Exemplo:
+
+No caso do conceito de controle remoto, temos por definição que um controle possúi
+os seguintes botões: Ligar/desligar, ajustar volume e mudar canal.
+
+Ao se definir uma classe controle remoto genérico, podemos dizer que qualquer controle remoto
+filho dessa classe terá os botões citados acima obrigatoriamente, onde cada
+controle terá sua própria forma de executar a ação vinculada a esse botão.
+
+Controle Genérico
+  + ligar() {abstract}
+  + desligar() {abstract}
+  + aumentar_volume() {abstract}
+  + diminuir_volume() {abstract}
+  + avancar_canal() {abstract}
+  + retroceder_canal() {abstract}
+
+No exemplo acima, a classe "Controle Genérico" é uma classe abstrata e possúi a declaração
+dos seus métodos, porém não possúi as suas respectivas implementações. Ou seja são métodos
+abstratos que precisam ser implementados dentro das classes filhas, que podemos chamar
+de classes concretas.
+
+
+Exemplo 2:
+
+Além dos método abstratos, uma classe abstrata também pode conter um método concreto, ou seja,
+um método já implementado, que possúi todo o código já definido.
+
+(Abstrata)
+Pessoa
+  + nome
+  + idade
+  + fazer_aniversario()
+  + estudar() {abstract}
+
+
+(Concreta)
+Aluno                        Professor                   Funcionario
+  + curso                      + especialidade             + cargo
+  + turma                      + nivel                     + setor
+  + fazer_matricula()          + dar_aula()                + bater_ponto()
+  + estudar()                  + estudar()                 + estudar()
+
+
+No caso acima, a classe Pessoa que é abstrata, possúi o método "fazer_aniversario()" que é
+um método concreto, ou seja já implementado, porém também possúi o método "estudar()" que é
+um método abstrato. O método "estudar()" deverá então ser implementado em cada classe filha
+que herda da classe mãe/abstrata "Pessoa".
+
+
+Conceitos importantes:
+
+Uma classe abstrata nunca será instanciada, já que ela será usada como base para as subclasses.
+
+Ao definir um conjunto de métodos abstratos, dizemos que estamos criando a interface pública
+da classe.
+
+Uma classe abstrata pode ter métodos abstratos que deverão ser obrigatoriamente implementados
+nas subclasses.
+
+Mas uma classe abstrata pode ter métodos concretos se eles funcionarem da mesma maneira para
+todos as subclasses.
